@@ -48,7 +48,7 @@ public class vendasVIEW extends JFrame {
             DefaultTableModel model = (DefaultTableModel) produtosTable.getModel();
             model.setNumRows(0);
             
-            ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutos();
+            ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutosVendidos();
             
             for(int i = 0; i < listagem.size(); i++){
                 model.addRow(new Object[]{
