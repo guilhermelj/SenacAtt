@@ -62,18 +62,8 @@ public class ProdutosDAO {
         return listagem;
     }
     
-    public void venderProduto(int id) {
-    	conn = new conectaDAO().connectDB();
-    	try {
-			prep = conn.prepareStatement("UPDATE produtos SET status = ? WHERE id = ?");
-			prep.setString(1, "Vendido");
-			prep.setInt(2, id);
-			prep.executeUpdate();
-			JOptionPane.showMessageDialog(null, "O status foi atualizado com sucesso!");
-		} catch (SQLException e) {
-			System.out.println("Não foi possível atualizar um produto no banco de dados");
-			e.printStackTrace();
-		}
-    }
+    
+    
+        
 }
 
